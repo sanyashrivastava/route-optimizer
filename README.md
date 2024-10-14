@@ -15,4 +15,4 @@ available after the visualization is completed.
 
 6. Path Reconstruction: After the algorithm finishes, the shortest path is reconstructed and highlighted on the 
 graph.
-![image](https://github.com/user-attachments/assets/926b71f7-244a-41ab-a693-3698768bfd9f)
+
