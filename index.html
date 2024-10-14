@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra's Algorithm Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dijkstra's Algorithm Visualization</h1>
+    
+    <section id="explanation">
+        <h2>Explanation</h2>
+        <p>Dijkstra's algorithm is used to find the shortest path between nodes in a graph. It works by visiting the unvisited vertex with the smallest known distance, calculating the distance through it to each unvisited neighbor, and updating the neighbor's distance if smaller.</p>
+    </section>
+
+    <section id="pseudocode">
+        <h2>Pseudocode</h2>
+        <pre>
+function Dijkstra(Graph, source):
+    create vertex set Q
+    for each vertex v in Graph:
+        dist[v] ← INFINITY
+        prev[v] ← UNDEFINED
+        add v to Q
+    dist[source] ← 0
+
+    while Q is not empty:
+        u ← vertex in Q with min dist[u]
+        remove u from Q
+
+        for each neighbor v of u:
+            alt ← dist[u] + length(u, v)
+            if alt < dist[v]:
+                dist[v] ← alt
+                prev[v] ← u
+
+    return dist[], prev[]
+        </pre>
+    </section>
+
+    <section id="graph-container">
+        <h2>Graph</h2>
+        <canvas id="graphCanvas" width="600" height="400"></canvas>
+    </section>
+
+    <button id="visualizeBtn">Visualize Algorithm</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
